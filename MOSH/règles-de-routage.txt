@@ -1,0 +1,3 @@
+- les deux composants d'un filtre le plus près l'un de l'autre
+- les pistes de power plus larges que les autres
+- les capas de couplage proches des sources de courant 

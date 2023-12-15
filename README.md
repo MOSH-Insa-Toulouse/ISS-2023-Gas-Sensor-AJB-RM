@@ -11,7 +11,7 @@ As we both come from a computer science background (4IR-SC), we used the first l
 
 <img src="./Image/Application_Bluetooth.png" alt="Screenshot of our Android application" width="200"/>
 *Screenshot of our Android application*
-
+\\
 These first sessions were really usefull to understand the basics of Arduino programming and electronics. These small projects were a good introduction to the real project of this course.
 
 #  Begining of the project

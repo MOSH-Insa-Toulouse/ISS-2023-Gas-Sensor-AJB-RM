@@ -1,3 +1,10 @@
 - les deux composants d'un filtre le plus près l'un de l'autre
 - les pistes de power plus larges que les autres
 - les capas de couplage proches des sources de courant 
+
+
+Default	0.2 mm	0.25 mm	0.6 mm	0.4 mm	0.3 mm	0.1 mm	0.2 mm	0.25 mm	
+power	0.2 mm	1.2 mm	0.6 mm	0.4 mm	0.3 mm	0.1 mm	0.2 mm	0.25 mm	
+
+Minimum clearance 0.8mm
+Minimum track width 0.8mm

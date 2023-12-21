@@ -47,16 +47,16 @@ MQTT is a communication protocol particulary used for IoT devices. With this pro
 
 Node-red is a web-browser flow editor that helps to easily connect flows. It provides visual coding with blocks for the ease of conception. It also implements dashboard library to display the data is user friendly dahsboards. We used a MQTT subscribe block to get the data from chirpstack that we pipe into a javascript function that decodes the data (it is encoded in base64 by chirpstack). Finaly we send the decoded data to a dashboard block to visualize the data.
 
-<img src="./Image/flux_node_red.png" alt="Screenshot of our Android application" width="400"/>
+<img src="./Image/flux_node_red.png" alt="Screenshot of our Android application" width="600"/>
 *The node-red flow*
 
 
 To test our sensor, we putted hydroalcoholic gel near it to see if we could see it on our dashboard. This experience was a succes and we were able to see through the dashboard the increase of the gas rate near the sensor.
 
-<img src="./Image/Gas_Sensor_Dashboard.png" alt="Screenshot of our Android application" width="400"/>
+<img src="./Image/Gas_Sensor_Dashboard.png" alt="Screenshot of our Android application" width="600"/>
 *Dashboard for the witness exprience without any gas*
 
-<img src="./Image/Dashboard_Gas_Sensor.png" alt="Screenshot of our Android application" width="400"/>
+<img src="./Image/Dashboard_Gas_Sensor.png" alt="Screenshot of our Android application" width="600"/>
 *Dashboard for the exprience with alcoholic gel*
 
 # Design of the PCB 

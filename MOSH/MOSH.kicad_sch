@@ -2475,7 +2475,7 @@
     (effects (font (size 1.27 1.27)) (justify top))
     (uuid 0246235f-40cd-4883-9b0e-61be71b282e1)
   )
-  (text_box "Variable Resistance (Digital Potentiometer)"
+  (text_box "Variable Resistor\n (Digital Potentiometer)"
     (at 222.25 76.2 0) (size 49.53 5.08)
     (stroke (width 0) (type default))
     (fill (type none))

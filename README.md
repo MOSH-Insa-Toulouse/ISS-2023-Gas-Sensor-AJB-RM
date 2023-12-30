@@ -119,6 +119,8 @@ power	| 0.2 mm	| 1.2 mm	| 0.6 mm	| 0.4 mm
 
 **Minimum track width: 0.8mm**
 
+**Minimum via diameter: 1.5mm**
+
 This PCB is far from perfect as we are two computer science students. We did not had the time to print it and integrate it with a real sensor. 
 
 We can cite some ways to improve it if we were to continue the project:
@@ -126,11 +128,26 @@ We can cite some ways to improve it if we were to continue the project:
 - there is some clearance violations on the gas sensor, because we had to adopt less stricts rules to be able to route the sensor's tracks.
 - there are quite a lot of right angles on the 5V track that we were not able to eliminate but that could be problematic.
 - some angles on the PCB are acute, even if we tried to avoid them.
-- you can notice that we connected one of the non connected pins of the sensor to ISENS2 to facilitate routing.  
+- you can notice that we connected one of the non connected pins of the sensor to ISENS2 to facilitate routing.
+- there is a problem with the transistor that would disturb the placement of the arduino, it should be changed. 
 
 
 # Datasheet of our gas sensor from AIME 
 
+TODO : lien vers datasheet et sources 
+
 # To go further
 
+As we did not had time to print the PCB, some obvious steps to bring our work further would be: 
+- print the PCB
+- weld all the components
+- test the electrical circuits
+- write code to control the heating resistor and the potentiometer
+- create a retrocontrolled loop to manage sensor's temperature
+- test the sensor reactivity to NH<sub>3</sub> and C<sub>2</sub>H<sub>6</sub>O 
+- test the whole system with Lora transmission of the data and display in the node-red application
+- enjoy a fully smart sensor ;-) 
+
 # Conclusion
+
+This project was a great start to finish introduction to the world of sensors, from fabrication to integration of the data on user-friendly dashboards. We were able to develop or reinforce skills in various fields like Lora communication, node-red applications, or PCB design. 

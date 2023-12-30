@@ -6,6 +6,7 @@
 
   (paper "A4")
   (title_block
+    (title "ISS 2023 AJB & RM - Gas Sensor")
     (date "mar. 31 mars 2015")
   )
 
@@ -1760,6 +1761,9 @@
     (stroke (width 0.15) (type solid)) (layer "Edge.Cuts") (tstamp 63988798-ab74-4066-afcb-7d5e2915caca))
   (gr_line (start 100 45.39) (end 168.58 45.39)
     (stroke (width 0.15) (type solid)) (layer "Edge.Cuts") (tstamp 6fef40a2-9c09-4d46-b120-a8241120c43b))
+  (gr_text "ISS 2023 AJB & RM\nGas Sensor" (at 100 56.82) (layer "F.Cu") (tstamp bbf1c578-3847-448b-a18a-e261a786d83a)
+    (effects (font (size 1.5 1.5) (thickness 0.3) bold) (justify left bottom))
+  )
   (gr_text "ICSP" (at 164.897 72.06 90) (layer "Dwgs.User") (tstamp 8a0ca77a-5f97-4d8b-bfbe-42a4f0eded41)
     (effects (font (size 1 1) (thickness 0.15)))
   )

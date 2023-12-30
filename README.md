@@ -1,6 +1,6 @@
 # ISS-2023-Gas-Sensor-AJB-RM
 
-# Authors
+### Authors
 Romain Moulin & Aude Jean-Baptiste, 5ISS 2023-2024
 
 # Introduction
@@ -11,11 +11,10 @@ As we both come from a computer science background (4IR-SC), we used the first l
 
 <img src="./Image/Application_Bluetooth.png" alt="Screenshot of our Android application" width="200"/> *Screenshot of our Android application*
 
-
-
 These first sessions were really usefull to understand the basics of Arduino programming and electronics. These small projects were a good introduction to the real project of this course.
 
-#  Beginning of the project
+# Lora network integration
+
 To begin our project, we first tried to connect an arduino to the Lora network. To do so, we used a RN2483 chip made by Microship which is a module that is able to communicate on a Lora network. As this chip only has tiny connectors, we needed to weld the component to a board that would have bigger connectors for the communication with the arduino. The following image features the board with an antenna for the 868MHz frequency band. 
 
 <img src="./Image/RN2483_with_board.jpeg" alt="RN2483 Module weld on the board" width="400"/> *RN2483 Module weld on the board*
@@ -45,16 +44,64 @@ Node-red is a web-browser flow editor that helps to easily connect flows. It pro
 
 <img src="./Image/flux_node_red.png" alt="The node-red flow" width="600"/> *The node-red flow*
 
+# Test of the MQ-3B solution
 
-To test our sensor, we putted hydroalcoholic gel near it to see if we could see it on our dashboard. This experience was a succes and we were able to see through the dashboard the increase of the gas rate near the sensor.
+To test our sensor, we putted hydroalcoholic gel near it to see if we could see it on our dashboard. This experience was a succes and we were able to see on the dashboard the increase of the gas rate near the sensor.
 
 <img src="./Image/Gas_Sensor_Dashboard.png" alt="Dashboard for the witness experience in ambient air" width="600"/> *Dashboard for the witness experience in ambient air*
 
 <img src="./Image/Dashboard_Gas_Sensor.png" alt="Dashboard for the experience with alcoholic gel" width="600"/> *Dashboard for the experience with alcoholic gel*
 
-# Design of the PCB 
 
-# Datasheet 
+# Integration of our gas sensor from AIME 
+
+The specifications of our gas sensor are detailed in the datasheet (see below). In order to replace the commercial sensor (MQ-3B) by our gas sensor in our previously detailed monitoring solution with Lora and node-red, we need to follow various steps. 
+
+Indeed, our sensor per se is passive; changes in its resistance allow us to monitor gas presence. We will power and control the sensor through an arduino uno and get its data with the ADC (analog digital converter),  like we did with the MQ-3B. 
+
+The screenshots on the following part have been extracted from our Kicad project, that you can find [here](./MOSH). 
+
+## Transimpedance amplifier
+
+The first stage to treat sensor data is a transimpedance amplifier that will allow us to shape the signal for it to be detected by the arduino's ADC. This stage contains 3 low-pass filters with the following cut-off frequencies and roles: 
+- filter 1: 16Hz - this filter is here to eliminate as much noise from the sensor as possible
+- filter 2: 1.6Hz - this filter should get rid off the 50Hz noise
+- filter 3: 1.6kHz - this filter should adapt the signal to the arduino's ADC 
+
+The transimpedance amplifier is featured in the following image. 
+
+<img src="./Image/trans-ampliop.png" alt="Transimpedance amplifier schematic" width="400"/> *Our transimpedance amplifier stage*
+
+
+You might notice that what we called R3 on this schematic is not a resistor. Indeed, we need to apply a variable resistance to the reverser entry of the operationnal amplifier. This variable resistor is detailed in the next subsection. 
+
+## Digital potentiometer
+
+We use a digital potentiometer as a variable resistor. We choose a MCP41100. This component is powered on 5V and controlled by the arduino via SPI (3 pins: Clock, MOSI and CS). 
+
+The following image features the schematic for this component. 
+
+<img src="./Image/potentiometer.png" alt="Digital Potentiometer schematic" width="300"/> *Montage for the digital potentiometer*
+
+## Heating resistor controlled via PWM 
+
+Our sensor is a "smart sensor". It contains a heating resistor (a polysilicium resistor) as well as a temperature sensor (an aluminium resistor). The heating resistor needs to be controlled by the arduino via PWM, which is possible thanks to the following montage with a IRF540N transistor. 
+
+<img src="./Image/pwm.png" alt="PWM montage" width="400"/> *PWM montage with transistor*
+
+
+## Sensor connections 
+
+We designed a symbol in Kicad for our sensor. You can find the library [here](./Library_AJB_RM_0). The symbol is associated with the Package_TO_SOT_THT:TO-5-10 footprint, on which our sensor has been mounted. 
+
+The schematic of the sensor connections is featured below. 
+
+<img src="./Image/gas-sensor.png" alt="Gas sensor connections" width="400"/> *Our gas sensor connections on the schematic*
+
+
+## PCB design 
+
+# Datasheet of our gas sensor from AIME 
 
 # To go further
 

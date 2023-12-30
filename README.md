@@ -70,7 +70,7 @@ The first stage to treat sensor data is a transimpedance amplifier that will all
 
 The transimpedance amplifier is featured in the following image. 
 
-<img src="./Image/trans-ampliop.png" alt="Transimpedance amplifier schematic" width="600"/> *Our transimpedance amplifier stage*
+<img src="./Image/trans-ampliop.png" alt="Transimpedance amplifier schematic" width="400"/> *Our transimpedance amplifier stage*
 
 
 You might notice that what we called R3 on this schematic is not a resistor. Indeed, we need to apply a variable resistance to the reverser entry of the operationnal amplifier. This variable resistor is detailed in the next subsection. 
@@ -81,13 +81,13 @@ We use a digital potentiometer as a variable resistor. We choose a MCP41100. Thi
 
 The following image features the schematic for this component. 
 
-<img src="./Image/potentiometer.png" alt="Digital Potentiometer schematic" width="600"/> *Montage for the digital potentiometer*
+<img src="./Image/potentiometer.png" alt="Digital Potentiometer schematic" width="300"/> *Montage for the digital potentiometer*
 
 ## Heating resistor controlled via PWM 
 
 Our sensor is a "smart sensor". It contains a heating resistor (a polysilicium resistor) as well as a temperature sensor (an aluminium resistor). The heating resistor needs to be controlled by the arduino via PWM, which is possible thanks to the following montage with a IRF540N transistor. 
 
-<img src="./Image/pwm.png" alt="PWM montage" width="600"/> *PWM montage with transistor*
+<img src="./Image/pwm.png" alt="PWM montage" width="400"/> *PWM montage with transistor*
 
 
 ## Sensor connections 
@@ -96,7 +96,7 @@ We designed a symbol in Kicad for our sensor. You can find the library [here](./
 
 The schematic of the sensor connections is featured below. 
 
-<img src="./Image/gas-sensor.png" alt="Gas sensor connections" width="600"/> *Our gas sensor connections on the schematic*
+<img src="./Image/gas-sensor.png" alt="Gas sensor connections" width="400"/> *Our gas sensor connections on the schematic*
 
 
 ## PCB design 

@@ -1,4 +1,4 @@
-# ISS-2023: Gas sensor 
+# ISS 2023: Gas sensor 
 
 ### Authors
 Romain Moulin & Aude Jean-Baptiste, 5ISS 2023-2024

@@ -85,7 +85,7 @@ The following image features the schematic for this component.
 
 ## Heating resistor controlled via PWM 
 
-Our sensor is a "smart sensor". It contains a heating resistor (a polysilicium resistor) as well as a temperature sensor (an aluminium resistor). The heating resistor needs to be controlled by the arduino via PWM, which is possible thanks to the following montage with a IRF540N transistor. 
+Our sensor is a "smart sensor". It contains a heating resistor (a polysilicon resistor) as well as a temperature sensor (an aluminium resistor). The heating resistor needs to be controlled by the arduino via PWM, which is possible thanks to the following montage with a IRF540N transistor. 
 
 <img src="./Image/pwm.png" alt="PWM montage" width="400"/> *PWM montage with transistor*
 

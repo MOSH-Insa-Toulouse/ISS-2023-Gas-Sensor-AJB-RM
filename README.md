@@ -98,8 +98,36 @@ The schematic of the sensor connections is featured below.
 
 <img src="./Image/gas-sensor.png" alt="Gas sensor connections" width="400"/> *Our gas sensor connections on the schematic*
 
-
 ## PCB design 
+
+We designed a PCB to integrate our sensor with all the previously described stages. 
+
+This PCB is featured in the following figure. 
+
+<img src="./Image/pcb.png" alt="PCB view" width="600"/> *Our PCB for sensor integration*
+
+<img src="./Image/3d-view.png" alt="3D view" width="600"/> *A nice 3D view of our PCB*
+
+We followed these clearance and track size rules: 
+
+Name|Clearance|Track Width|Via size|Via Hole
+---|---|---|---|---
+Default	| 0.2 mm	| 0.25 mm	| 0.6 mm	| 0.4 mm	
+power	| 0.2 mm	| 1.2 mm	| 0.6 mm	| 0.4 mm	
+
+**Minimum clearance: 0.8mm**
+
+**Minimum track width: 0.8mm**
+
+This PCB is far from perfect as we are two computer science students. We did not had the time to print it and integrate it with a real sensor. 
+
+We can cite some ways to improve it if we were to continue the project:
+- the vias could be bigger and better placed, especially the one for the ADC track.
+- there is some clearance violations on the gas sensor, because we had to adopt less stricts rules to be able to route the sensor's tracks.
+- there are quite a lot of right angles on the 5V track that we were not able to eliminate but that could be problematic.
+- some angles on the PCB are acute, even if we tried to avoid them.
+- you can notice that we connected one of the non connected pins of the sensor to ISENS2 to facilitate routing.  
+
 
 # Datasheet of our gas sensor from AIME 
 

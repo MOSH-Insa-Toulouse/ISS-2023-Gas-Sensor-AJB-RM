@@ -136,7 +136,7 @@ We can cite some ways to improve it if we were to continue the project:
 
 # Datasheet of our gas sensor from AIME 
 
-We realized a datasheet for our gas sensor that you can find [here](./datasheet.pdf). 
+We realized a datasheet for our gas sensor that you can find [here](./Datasheet.pdf). 
 
 You might realize that it does not include the graphs that show the evolution of sensor's resistance with gas presence, because we were not given this year's data from AIME training period (and our nano particles synthesis did not worked as expected anyway). Furthermore, the previous years' data were uncomplete as they were not labeled with the gas' names.  
 

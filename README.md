@@ -68,6 +68,8 @@ The first stage to treat sensor data is a transimpedance amplifier that will all
 - filter 2: 1.6Hz - this filter should get rid off the 50Hz noise
 - filter 3: 1.6kHz - this filter should adapt the signal to the arduino's ADC 
 
+This circuit was simulated on LTSpice to test the properties of the different filters and of the transimpedance amplifier per se. You can find all the related work in [this directory](./ltspice-stuff)
+
 The transimpedance amplifier is featured in the following image. 
 
 <img src="./Image/trans-ampliop.png" alt="Transimpedance amplifier schematic" width="400"/> *Our transimpedance amplifier stage*

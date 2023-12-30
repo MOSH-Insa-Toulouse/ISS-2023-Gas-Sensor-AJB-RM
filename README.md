@@ -19,7 +19,7 @@ To begin our project, we first tried to connect an arduino to the Lora network. 
 
 <img src="./Image/RN2483_with_board.jpeg" alt="RN2483 Module weld on the board" width="400"/> *RN2483 Module weld on the board*
 
-After this step, we were able to connect our arduino to the INSA's Lora network. For this, we used *The Things Network* library for arduino, the code is available [here](./Arduino-Code/lora_connection/lora_connection.ino).
+After this step, we were able to connect our arduino to the INSA's Lora network. For this, we used *The Things Network* library for arduino, the code is available [here](./Arduino-Code/lora_connection/lora_connetion.ino).
 For this, we had used the otaa authentication method. We got the device ID using the library and the application ID and key on the [chirpstack's INSA website](https://srv-chirpstack.insa-toulouse.fr/#/login) (please note that this server is only available if you are directly connected to INSA's network, or using a VPN). 
 
 <img src="./Image/Arduino_Authentification.png" alt="Authentication of the arduino to the Lora network" width="200"/> *Authentication of the arduino to the Lora network*

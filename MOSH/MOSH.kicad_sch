@@ -2462,7 +2462,7 @@
     (fill (type none))
     (uuid a193ce49-db4b-402d-9b2e-3ad1cc6354b5)
   )
-  (rectangle (start 118.11 26.67) (end 207.01 87.63)
+  (rectangle (start 116.84 24.13) (end 207.01 87.63)
     (stroke (width 0) (type default))
     (fill (type none))
     (uuid f86e716a-169e-44f2-a1b3-a2b1384dd3a4)
@@ -2490,7 +2490,7 @@
     (uuid 614dc197-82bd-4fc0-8e99-87051b32437c)
   )
   (text_box "Transimpedance Amplifier"
-    (at 118.11 87.63 0) (size 88.9 3.81)
+    (at 116.84 87.63 0) (size 90.17 3.81)
     (stroke (width 0) (type default))
     (fill (type none))
     (effects (font (size 1.27 1.27)) (justify top))

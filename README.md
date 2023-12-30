@@ -1,7 +1,7 @@
 # ISS-2023-Gas-Sensor-AJB-RM
 
 # Authors
-Romain Moulin & Aude Jean-Baptiste
+Romain Moulin & Aude Jean-Baptiste, 5ISS 2023-2024
 
 # Introduction
 The objective of this project is to integrate a gas sensor that we made ourselves during a training period at AIME (Atelier Interuniversitaire de Micro Electronique) and send its data over a Lora network to a dashboard to see and analyse the values.
@@ -15,14 +15,14 @@ As we both come from a computer science background (4IR-SC), we used the first l
 
 These first sessions were really usefull to understand the basics of Arduino programming and electronics. These small projects were a good introduction to the real project of this course.
 
-#  Begining of the project
+#  Beginning of the project
 To begin our project, we first tried to connect an arduino to the Lora network. To do so, we used a RN2483 chip made by Microship which is a module that is able to communicate on a Lora network. As this chip only has tiny connectors, we needed to weld the component to a board that would have bigger connectors for the communication with the arduino.
 
 <img src="./Image/RN2483_with_board.jpeg" alt="Screenshot of our Android application" width="400"/>
 *RN2483 Module weld on the board*
 
 After this step, we were able to connect our arduino to the INSA's Lora network. For this, we used *The Things Network* library for arduino, the code is available [here](./Arduino-Code/lora_connection/lora_connection.ino).
-For this, we had used the otaa authentication method. We got the device ID using the library and the application ID and key on the chirpstack website. 
+For this, we had used the otaa authentication method. We got the device ID using the library and the application ID and key on the [chirpstack's INSA website](https://srv-chirpstack.insa-toulouse.fr/#/login) (please note that this server is only available if you are directly connected to INSA's network, or using a VPN). 
 
 <img src="./Image/Arduino_Authentification.png" alt="Screenshot of our Android application" width="200"/>
 *Authentication of the arduino to the Lora network*
@@ -31,17 +31,17 @@ For this, we had used the otaa authentication method. We got the device ID using
 
 With the established connection, we had to send data to the gateway in order to retrive it and display it on a dashboard. As a first implementation of this application we connected an alreay made gas sensor which is the MQ-3B gas sensor to our arduino. The final montage of our circuit is the following:
 
-<img src="./Image/final_montage.jpeg" alt="Screenshot of our Android application" width="400"/>
+<img src="./Image/final_montage.jpeg" alt="Montage of the circuit with the MQ-3B gas sensor" width="400"/>
 *Montage of the circuit with the MQ-3B gas sensor*
 
 After that we changed our arduino code to read the value from the gas sensor and send it to our LoRa network. As the max value we can get from the sensor is 1024, we encoded the information on 2 bytes before sending it.
 
-<img src="./Image/Arduino_Code.png" alt="Screenshot of our Android application" width="400"/>
-*Our arduino setup and loop function*
+<img src="./Image/Arduino_Code.png" alt="*Our arduino setup and loop functions" width="400"/>
+*Our arduino setup and loop functions*
 
 # Design of a node-red application
 
-As the data is received by the LoRa network, we could visualize it on the chirpstack web page. However, it is not fited for a real usage of our gas sensor. A user of gas sensor would like to see the state of the sensor in real time in a dashboard. To do so, we decieded to use node-red and MQTT.
+As the data is received by the LoRa network, we could visualize it on the chirpstack web page. However, it is not fitted for a real usage of our gas sensor. A user of gas sensor would like to see the state of the sensor in real time in a dashboard. To do so, we decided to use node-red and MQTT.
 
 MQTT is a communication protocol particulary used for IoT devices. With this protocol there are two kind of nodes, the publisher and the subscribers. Publishers publish data in a topic and subscriber get all the data published on a specific topic. This protocol is supported by chirpstack which automatically upload the data it receives in a MQTT topic. 
 
@@ -60,6 +60,8 @@ To test our sensor, we putted hydroalcoholic gel near it to see if we could see 
 *Dashboard for the exprience with alcoholic gel*
 
 # Design of the PCB 
+
+# Datasheet 
 
 # To go further
 

@@ -131,7 +131,6 @@ We can cite some ways to improve it if we were to continue the project:
 - there are quite a lot of right angles on the 5V track that we were not able to eliminate but that could be problematic.
 - some angles on the PCB are acute, even if we tried to avoid them.
 - you can notice that we connected one of the non connected pins of the sensor to ISENS2 to facilitate routing.
-- there is a problem with the transistor that would disturb the placement of the arduino, it should be changed. 
 
 
 # Datasheet of our gas sensor from AIME 
